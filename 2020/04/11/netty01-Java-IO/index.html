@@ -30,6 +30,13 @@
     </div>
     <div class="post-content">
         <h4 id="写在开头"><a href="#写在开头" class="headerlink" title="写在开头"></a>写在开头</h4><p>关于为什么要学习 <code>netty</code>,这里不赘言。<code>netty</code> 要学好，那么必须要对<code>Java IO</code> 有一个基础的了解。</p>
+<p>这里不是带谁谁谁入门IO，NIO。这里仅仅是我的个人笔记，希望可以也给你带来帮助。</p>
+<h3 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h3><ul>
+<li>IO的理解</li>
+<li>NIO的理解 </li>
+<li>阻塞/非阻塞 的理解</li>
+<li>同步/异步的理解</li>
+</ul>
 <p>这里我是围绕小话题 以及 图来加深自己对知识点的理解。</p>
 <h4 id="0、IO"><a href="#0、IO" class="headerlink" title="0、IO"></a>0、IO</h4><p>IO 即 input 、output.</p>
 <ul>
@@ -37,9 +44,28 @@
 <li>output 内存写到磁盘 write()写出去</li>
 </ul>
 <h4 id="1、阻塞和非阻塞是什么"><a href="#1、阻塞和非阻塞是什么" class="headerlink" title="1、阻塞和非阻塞是什么"></a>1、阻塞和非阻塞是什么</h4><ul>
-<li>阻塞</li>
+<li>阻塞 不能同时满足多个请求，只有一个能满足，其他的需要等待</li>
+<li>非阻塞 就是可以满足多个</li>
 </ul>
-<h4 id="2、-同步和异步是什么？"><a href="#2、-同步和异步是什么？" class="headerlink" title="2、 同步和异步是什么？"></a>2、 同步和异步是什么？</h4>
+<h4 id="2、-同步和异步是什么？"><a href="#2、-同步和异步是什么？" class="headerlink" title="2、 同步和异步是什么？"></a>2、 同步和异步是什么？</h4><ul>
+<li><p>同步 就是串行</p>
+</li>
+<li><p>异步 就是并行</p>
+<h4 id="3、NIO"><a href="#3、NIO" class="headerlink" title="3、NIO"></a>3、NIO</h4></li>
+<li><p>同步非阻塞,实现方式就是 多路复用</p>
+</li>
+<li><p>异步非阻塞，理论上最牛。但是实际上的使用效果没有那么好</p>
+</li>
+</ul>
+<h4 id="reactor"><a href="#reactor" class="headerlink" title="reactor"></a>reactor</h4><p>分三种：</p>
+<ul>
+<li>单线程</li>
+<li>多线程</li>
+<li>主从多线程</li>
+</ul>
+<p>目的是 多路复用思想的落地。</p>
+<p>那么引入新的概念，关于NIO</p>
+<h5 id="Buffer"><a href="#Buffer" class="headerlink" title="Buffer"></a>Buffer</h5><h5 id="Selector"><a href="#Selector" class="headerlink" title="Selector"></a>Selector</h5><h5 id="Channel"><a href="#Channel" class="headerlink" title="Channel"></a>Channel</h5>
     </div>
     
         <hr class="fhr">
